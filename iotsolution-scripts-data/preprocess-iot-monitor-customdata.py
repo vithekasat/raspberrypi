@@ -170,7 +170,7 @@ latlong=lat:long'
      identifier = "IoT device performance and failures"
 
      # if dataage - use:dataage_utcoffset_timetype
-     preprocesslogic='anomprob,trend,avg'
+     preprocesslogic='MIN,MAX,COUNT,VARIANCE,OUTLIERS,ANOMPROB'
 
      pathtotmlattrs='oem=n/a,lat=n/a,long=n/a,location=n/a,identifier=n/a'          
      try:
@@ -212,4 +212,5 @@ loop.create_task(spawnvipers())
 asyncio.set_event_loop(loop)
 
 loop.run_forever()
+
 
